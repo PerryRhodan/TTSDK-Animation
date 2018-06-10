@@ -3,6 +3,8 @@
 Below is a small example highlighting the features of this library and how to use them.
 
 ## Plain image drawing
+The library offers the DrawableImage interface to offer a more conevnient way to draw differnt types of images. Below the implementation of a simple plain image is demonstrated.
+
 ```java
 // We need a JavaFx Canvas first
 Canvas can = new Canvas(500,  500);
@@ -93,6 +95,8 @@ thread_testanim.start();
 ```
 
 ## Focus and target draw position
+A key functionaility is the Focus class, which basically acts as a global camera position. Additionally a drawing position can specifiy an individual images position and orientation. Again, the example below uses the same Canvas, GraphicsContext, Focus, and DrawingPosition as the first example.
+
 ```java
 // To demonstrate the focus and drawing position 
 // a bit more, lets set up a similar test
