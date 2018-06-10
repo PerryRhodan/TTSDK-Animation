@@ -26,6 +26,8 @@ pimg.Draw(gc, target, focus);
 ```
 
 ## Animation
+The Animation class implements the same interface as the PlainImage, and can there be used in the same way - while at the same time being an animation with changing images. The example below uses the same Canvas, GraphicsContext, Focus, and DrawingPosition as the example above.
+
 ```java
 // First load our images required for the animation
 // This could either be a sprite sheet, ie a single image
@@ -90,6 +92,50 @@ Thread thread_testanim = new Thread(new Runnable() {
 thread_testanim.start();
 ```
 
-
-
 ## Focus and target draw position
+```java
+// To demonstrate the focus and drawing position 
+// a bit more, lets set up a similar test
+Thread thread_testfocus = new Thread(new Runnable() {
+    @Override
+    public void run() {
+	int max_cycles = 50;
+	int cycle_duration = 100;
+	// let's reuse the image from earlier.
+	try {
+	    int cycle_count = 0;
+	    while (cycle_count < max_cycles) {
+	
+		// here we can update the focus
+		// and or the image position
+		// This could be done for instance
+		// through key or mouse input
+		focus.AddTo_X(5); //move focus by 5 pixels
+		focus.AddTo_Zoom(0.01); //zoom in a bit
+				
+		// For instance add some rotation
+		target.AddTo_Rotation(1); //rotate by a degree
+
+		// so basically by chaning the focus you would
+		// draw ALL images differently,
+		// while changing the target for one image would
+		// only affect this single image.
+		
+		Platform.runLater(new Runnable() {
+	    	    @Override public void run() {
+			// we need to re-draw at the 
+			// updated target and focus
+			 pimg.Draw(gc, target, focus);
+		    }
+		});
+
+		cycle_count++;
+		Thread.sleep(cycle_duration);
+	    }
+	} catch (InterruptedException e) {
+	    e.printStackTrace();
+	}
+    }
+});
+thread_testfocus.start();
+```
