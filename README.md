@@ -44,7 +44,7 @@ ImageSheet img_sheet = new ImageSheet(new Image("file:res/anim_testimg_0.jpg")
 // Create the actual animation
 // - set time in ms for the full animation to exectue
 // - set weather or not the animation shall repeat automatically
-		// - and finally set the image set loaded above
+// - and finally set the image set loaded above
 Animation test_anim = new Animation(1000, true, img_sheet);
 
 // To demonstrate how the animation works, let's set up a 
