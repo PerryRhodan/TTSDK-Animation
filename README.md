@@ -3,7 +3,7 @@
 Below is a small example highlighting the features of this library and how to use them.
 
 ## Plain image drawing
-The library offers the DrawableImage interface to offer a more conevnient way to draw differnt types of images. Below the implementation of a simple plain image is demonstrated.
+The library offers the DrawableImage interface to offer a more convenient way to draw different types of images. Below the implementation of a simple plain image is demonstrated.
 
 ```java
 // We need a JavaFx Canvas first
@@ -28,7 +28,7 @@ pimg.Draw(gc, target, focus);
 ```
 
 ## Animation
-The Animation class implements the same interface as the PlainImage, and can there be used in the same way - while at the same time being an animation with changing images. The example below uses the same Canvas, GraphicsContext, Focus, and DrawingPosition as the example above.
+The Animation class implements the same interface as the PlainImage, and can therefore be used in the same way - while at the same time being an animation with changing images. The example below uses the same Canvas, GraphicsContext, Focus, and DrawingPosition as the example above.
 
 ```java
 // First load our images required for the animation
@@ -120,7 +120,7 @@ Thread thread_testfocus = new Thread(new Runnable() {
 		// For instance add some rotation
 		target.AddTo_Rotation(1); //rotate by a degree
 
-		// so basically by chaning the focus you would
+		// so basically by changing the focus you would
 		// draw ALL images differently,
 		// while changing the target for one image would
 		// only affect this single image.
