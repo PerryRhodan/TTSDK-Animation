@@ -48,7 +48,7 @@ public class DrawPosition {
 		this.w = w;
 		this.h = h;
 		this.rotation = 0.0;
-		this.alpha = 0.0;
+		this.alpha = 1.0;
 		// set default rotation center
 		rotation_x = x + w/2;
 		rotation_y = y + y/2;
@@ -60,7 +60,7 @@ public class DrawPosition {
 		this.w = w;
 		this.h = h;
 		this.rotation = rot;
-		this.alpha = 0.0;
+		this.alpha = 1.0;
 		// set default rotation center
 		rotation_x = x + w/2;
 		rotation_y = y + y/2;

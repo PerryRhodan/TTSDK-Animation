@@ -12,7 +12,10 @@
  *   
  * 
  * Ideas:
- *   
+ *   - TODO isRunning public getter
+ *   - TODO DrawWhenRequired() function
+ *   - TODO Only draw in Draw() method when 
+ *   		the animation is actually running.
  * 
  * Stephan Hogrefe, Edinburgh, 2017
  */

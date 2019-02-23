@@ -13,7 +13,8 @@
  *   
  * 
  * Ideas:
- *   
+ *   - TODO invert left - right (ie positive - negative values),
+ *  		would be more intuitive
  * 
  * Stephan Hogrefe, Edinburgh, 2017
  */

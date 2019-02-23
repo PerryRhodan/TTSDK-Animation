@@ -47,9 +47,9 @@ public class PlainImage implements DrawableImage {
 		Rotate r = new Rotate(focus.getRotation() + target.getRotation()
 				, focus.getRotation_x() + target.getRotation_x() * focus.getZoom() + focus.getX()
 				, focus.getRotation_y() + target.getRotation_y() * focus.getZoom() + focus.getY());
-        	context.setTransform(r.getMxx(), r.getMyx(), r.getMxy(), r.getMyy(), r.getTx(), r.getTy());
-		context.setGlobalAlpha(target.getAlpha());
-        	// draw image
+        context.setTransform(r.getMxx(), r.getMyx(), r.getMxy(), r.getMyy(), r.getTx(), r.getTy());
+        context.setGlobalAlpha(target.getAlpha());
+        // draw image
 		context.drawImage(image
 				, target.getX() * focus.getZoom() + focus.getX()
 				, target.getY() * focus.getZoom() + focus.getY()
