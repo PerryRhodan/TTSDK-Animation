@@ -113,6 +113,7 @@ public class TileImageData {
 		// load state images
 		File folder = new File(path);
 		File[] listOfFiles = folder.listFiles();
+		Arrays.sort(listOfFiles);
 		
 		state_images = new ArrayList<>();
 
